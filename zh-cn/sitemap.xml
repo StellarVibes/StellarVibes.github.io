@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://StellarVibes.github.io/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-14T23:32:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +14,12 @@
                 hreflang="zh-cn"
                 href="https://StellarVibes.github.io/"
                 />
+  </url><url>
+    <loc>https://StellarVibes.github.io/post/</loc>
+    <lastmod>2025-10-14T23:32:44+08:00</lastmod>
+  </url><url>
+    <loc>https://StellarVibes.github.io/p/test/</loc>
+    <lastmod>2025-10-14T23:32:44+08:00</lastmod>
   </url><url>
     <loc>https://StellarVibes.github.io/categories/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
@@ -29,9 +35,6 @@
                 />
   </url><url>
     <loc>https://StellarVibes.github.io/p/test-chinese/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://StellarVibes.github.io/post/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://StellarVibes.github.io/categories/test/</loc>
@@ -74,10 +77,10 @@
                 href="https://StellarVibes.github.io/tags/"
                 />
   </url><url>
-    <loc>https://StellarVibes.github.io/tags/themes/</loc>
+    <loc>https://StellarVibes.github.io/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://StellarVibes.github.io/categories/themes/</loc>
+    <loc>https://StellarVibes.github.io/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://StellarVibes.github.io/p/%E5%93%88%E5%93%88/</loc>
