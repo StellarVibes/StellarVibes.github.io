@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://StellarVibes.github.io/en/404.html'>
 
-<link rel="stylesheet" href="/scss/style.min.b5dc4cefbff51fb98a47acbc399c576b056551a81464130f7e5333bc3993188c.css"><meta property='og:title' content="404 Page not found">
+<link rel="stylesheet" href="/scss/style.min.fe264d503170a2378f53e6135d69634aa9a966d0eb5e8a4853581a3a3fecc844.css"><meta property='og:title' content="404 Page not found">
 <meta property='og:description' content="Example description">
 <meta property='og:url' content='https://StellarVibes.github.io/en/404.html'>
 <meta property='og:site_name' content='StellarVibes'>
@@ -70,7 +70,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/en">StellarVibes</a></h1>
-            <h2 class="site-description">欢迎来到我的网站！</h2>
+            <h2 class="site-description">欢迎来到我的网站,此博客用于记录学习笔记！</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -364,13 +364,39 @@
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<div id="aplayer"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<script>
+  
+  const musicDir = 'https:\/\/StellarVibes.github.io\/en\/music/';
+  const songs = [
+    '买辣椒也用券 - 起风了',
+    '司南 - 吹灭小山河',
+    '王天阳 - 借月',
+    '袁咏琳 - 心底',
+    '张晓棠 - 苏幕遮'
+  ];
 
-<meting-js
-	server="netease"
-	type="playlist"
-	id="7330197979">
-</meting-js>
+  const audios = [];
+
+  songs.forEach(item => {
+    const songInfo = item.split(' - ');
+    audios.push({
+      name: songInfo[1],
+      artist: songInfo[0],
+      url: musicDir + item + '/song.mp3',
+      cover: musicDir + item + '/music.png',
+      lrc: musicDir + item + '/lyric.lrc'
+    });
+  });
+
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: true,
+    lrcType: 3,
+    audio: audios
+  });
+</script>
+
     </body>
 </html>
