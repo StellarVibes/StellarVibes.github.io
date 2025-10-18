@@ -648,6 +648,12 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+
+
+    
+    <script src=https://StellarVibes.github.io/js/topbar.min.js></script>
+
+
 <script>
 	var pjax = new Pjax({
   selectors: [".main-container"]
@@ -667,8 +673,19 @@ pjax.handleResponse = function(responseText, request, href, options) {
     
   }
 }
+document.addEventListener('pjax:send', () =>{
+	topbar.show();
+})
+
+    topbar.config({
+        barColors: {
+            '0': 'rgba(255,  255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
 document.addEventListener('pjax:complete', () =>{
 	window.Stack.init();
+	topbar.hide();
 })
 </script>
 
