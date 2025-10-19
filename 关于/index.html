@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://StellarVibes.github.io/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.16293021b161ae77df36cdcd55c63dceb4288f15379a7fa9a482b24e0ae345b7.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/scss/style.min.ccad0b2e2b23366d438811c7322097347113c73c17a5af8e8bbec08b3cc4eae1.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="This is a test page for i18n support.\n">
 <meta property='og:url' content='https://StellarVibes.github.io/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='StellarVibes'>
@@ -689,6 +689,9 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
+<div class="math-katex"></div>
+
     
 </article>
 
@@ -699,55 +702,24 @@
      
     
         
-    <script
+    <div class="giscus"></div>
+<script
     src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="title"
+    data-repo="StellarVibes/StellarVibes.github.io"
+    data-repo-id="R_kgDOQCPC0g"
+    data-category="General"
+    data-category-id="DIC_kwDOQCPC0s4Cw0Re"
+    data-mapping="pathname"
     data-strict="0"
     data-reactions-enabled="1"
     data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="en"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
     crossorigin="anonymous"
     async
 ></script>
-<script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
-    }
-
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
-        });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('light');
-            } else {
-                setGiscusTheme('dark_dimmed');
-            }
-        }
-    })();
-</script>
+	<div class="comment"></div>
 
     
 
@@ -1166,7 +1138,6 @@ document.addEventListener('pjax:complete', () =>{
     z-index: -1;
   }
 </style>
-
 
 <script defer src="https://cn.vercount.one/js"></script>
 
