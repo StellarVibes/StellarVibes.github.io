@@ -1249,34 +1249,164 @@ document.addEventListener('pjax:complete', () =>{
   #particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
 </style>
 
+ -->
+ -->
+<script src="https://cn.vercount.one/js" data-auto="false" defer></script>
 
-<script src="https://cn.vercount.one/js" defer></script>
-<script>
-  function showHideView() {
-     
-    document.querySelectorAll('.viewCount').forEach(el => {
-      el.style.display = document.querySelector('.article-page') ? '' : 'none';
-    });
-  }
-  showHideView();
-  document.addEventListener('pjax:success', showHideView);
-</script>
-<script>
-    function showHideView() {
-        
-        let viewCounts = document.querySelectorAll("#viewCount");
-        if (viewCounts) {
-            
-            let article =  document.querySelector(".article-page");
-            if (!article) {
-                viewCounts.forEach(ele => {
-                    ele.style.display = 'none';
-                });
-            }
-        }
-    }
+
+
+  
     
-    showHideView();
+    
+      
+    
+  
+  
+  
+
+
+    
+        
+        
+        
+            
+            
+            
+                
+                    
+                
+            
+        
+    
+    
+    
+
+
+
+
+
+
+  
+  
+    
+    
+    
+  
+
+  
+  
+    
+    
+  
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+  
+    
+    
+  
+
+
+
+
+  
+  
+    
+      
+      
+      
+    
+    
+    
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+<script>
+ 
+function fillCount(data) {
+  const pv = document.getElementById('vercount_value_page_pv');
+  if (pv) pv.textContent = data.page_pv || '0';
+}
+
+ 
+function resetCount() {
+  const pv = document.getElementById('vercount_value_page_pv');
+  if (pv) pv.textContent = 'loading';
+}
+
+ 
+async function fetchCount(url) {
+  resetCount();
+  try {
+    const r = await fetch('https://events.vercount.one/api/v2/log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url })
+    });
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json();
+    fillCount(j.data || { page_pv: 0 });
+  } catch (e) {
+    fillCount({ page_pv: 'err' });
+  }
+}
+
+ 
+document.addEventListener('DOMContentLoaded', () => fetchCount(location.href));
+
+ 
+document.addEventListener('pjax:success', () => fetchCount(location.href));
+function showHideView() {
+    let viewCounts = document.querySelectorAll("#viewCount");
+    if (viewCounts.length > 0) {
+        let article = document.querySelector(".article-page");
+        viewCounts.forEach(ele => {
+            ele.style.display = article ? 'block' : 'none';
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', showHideView);
+
+
+document.addEventListener('pjax:success', showHideView);
+
 </script>
 
 
