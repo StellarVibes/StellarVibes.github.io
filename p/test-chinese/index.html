@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://StellarVibes.github.io/p/test-chinese/'>
 
-<link rel="stylesheet" href="/scss/style.min.f8275f7226003a8a13b9b70cf237d90b20cc7b62aad0d683be60c2f693661ba4.css"><meta property='og:title' content="初心">
+<link rel="stylesheet" href="/scss/style.min.571229aaf971cf6029a0587b3a23363f04d54152a340c6c59717dd9b36df497b.css"><meta property='og:title' content="初心">
 <meta property='og:description' content="正文 翻到两年杂乱的 Gitee 提交的代码，有c/c++/python/matlab/python/css/js/html，不同平台的算法题和看到语雀里堆在一起的笔记和csdn的几十篇博客，我想用这个网站复盘自己 “放养” 知识和合理存放代码的问题，一起加油吧！ 附上gitee提交记录和csdn博客： ">
 <meta property='og:url' content='https://StellarVibes.github.io/p/test-chinese/'>
 <meta property='og:site_name' content='StellarVibes'>
@@ -867,22 +867,40 @@
     
         
     <div class="giscus"></div>
-<script
-    src="https://giscus.app/client.js"
-    data-repo="StellarVibes/StellarVibes.github.io"
-    data-repo-id="R_kgDOQCPC0g"
-    data-category="General"
-    data-category-id="DIC_kwDOQCPC0s4Cw0Re"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async
-></script>
+<script src="https://giscus.app/client.js"
+        data-repo="StellarVibes/StellarVibes.github.io"
+        data-repo-id="R_kgDOQCPC0g"
+        data-category="General"
+        data-category-id="DIC_kwDOQCPC0s4Cw0Re"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+(function () {
+  function sendTheme() {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    const theme = document.documentElement.dataset.scheme === 'dark'
+                  ? 'preferred_color_scheme'
+                  : 'preferred_color_scheme';
+    iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+  }
+  
+  addEventListener('DOMContentLoaded', sendTheme);
+  addEventListener('message', (e) => {
+    if (e.origin === 'https://giscus.app') sendTheme();
+  });
+})();
+</script>
 	<div class="comment"></div>
 
     

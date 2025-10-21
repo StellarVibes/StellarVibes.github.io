@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://StellarVibes.github.io/%E5%85%B3%E4%BA%8Eabout/'>
 
-<link rel="stylesheet" href="/scss/style.min.f8275f7226003a8a13b9b70cf237d90b20cc7b62aad0d683be60c2f693661ba4.css"><meta property='og:title' content="关于|About">
+<link rel="stylesheet" href="/scss/style.min.571229aaf971cf6029a0587b3a23363f04d54152a340c6c59717dd9b36df497b.css"><meta property='og:title' content="关于|About">
 <meta property='og:description' content="Hugo, the world's fastest framework for building websites">
 <meta property='og:url' content='https://StellarVibes.github.io/%E5%85%B3%E4%BA%8Eabout/'>
 <meta property='og:site_name' content='StellarVibes'>
@@ -792,22 +792,40 @@
     
         
     <div class="giscus"></div>
-<script
-    src="https://giscus.app/client.js"
-    data-repo="StellarVibes/StellarVibes.github.io"
-    data-repo-id="R_kgDOQCPC0g"
-    data-category="General"
-    data-category-id="DIC_kwDOQCPC0s4Cw0Re"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async
-></script>
+<script src="https://giscus.app/client.js"
+        data-repo="StellarVibes/StellarVibes.github.io"
+        data-repo-id="R_kgDOQCPC0g"
+        data-category="General"
+        data-category-id="DIC_kwDOQCPC0s4Cw0Re"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+(function () {
+  function sendTheme() {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    const theme = document.documentElement.dataset.scheme === 'dark'
+                  ? 'preferred_color_scheme'
+                  : 'preferred_color_scheme';
+    iframe.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+  }
+  
+  addEventListener('DOMContentLoaded', sendTheme);
+  addEventListener('message', (e) => {
+    if (e.origin === 'https://giscus.app') sendTheme();
+  });
+})();
+</script>
 	<div class="comment"></div>
 
     
