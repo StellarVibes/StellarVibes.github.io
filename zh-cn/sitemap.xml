@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://StellarVibes.github.io/categories/</loc>
-    <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,10 +16,10 @@
                 />
   </url><url>
     <loc>https://StellarVibes.github.io/post/</loc>
-    <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://StellarVibes.github.io/</loc>
-    <lastmod>2025-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +30,12 @@
                 hreflang="zh-cn"
                 href="https://StellarVibes.github.io/"
                 />
+  </url><url>
+    <loc>https://StellarVibes.github.io/p/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://StellarVibes.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://StellarVibes.github.io/p/test-chinese/</loc>
     <lastmod>2025-10-16T00:00:00+00:00</lastmod>
